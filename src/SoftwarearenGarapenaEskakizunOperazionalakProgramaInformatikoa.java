@@ -14,6 +14,8 @@ public class SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa {
 
     static {
         eoAzalpenak.add("Eskakizun operazionalak sistema edo software baten funtzionamendu beharrak eta baldintzak zehazten dituzten dokumentuak dira.");
+        eoAzalpenak.add("Helburua sistema edo softwareak bezeroaren beharrak modu eraginkorrean asetzea da.");
+        eoAzalpenak.add("Eskakizun operazionalek funtzionalitate zehatzak, errendimendu baldintzak, segurtasun neurriak eta erabilgarritasun eskakizunak barne hartzen dituzte.");
     }
 
     static {
