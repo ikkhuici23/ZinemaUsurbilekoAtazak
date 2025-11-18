@@ -38,9 +38,19 @@ import java.util.ArrayList;
 // iruzkinak irakurriko ditu eta HTML fitxategi moduan formateatuko ditu. Sortutako dokumentazioa
 // nabigatzaile batean ikusi nahi baduzu, "docs/index.html" fitxategia irekiz, biztaratu ahal duzu.
 
+// Kodearen aplikatutako birfaktorizazioa:
+// ---------------------------------------
+//
+// 1. Javadoc iruzkinak gehitu dira klaseari. [lerro 49-54]
+// 2. paint() metodoa gehitu da, mezu bat kolore batez margotzeko eta ANSI kolore eskuz ez idazteko. [lerro 112-114]
+// 3. printArray() metodoa gehitu da, ArrayList baten edukia formateatuta inprimatzeko eta kode errepikatua saihesteko. [lerro 122-135]
+// 4. main() metodoa birfaktorizatu da, printArray() metodoa erabiliz eta kode askoz garbiagoa lortuz. [lerro 97-103]
+
 /**
  * Softwarearen garapena, eskakizun operazionalak eta programa informatikoak zer diren
  * azaltzen dituen klasea.
+ * 
+ * @author Kerman Huici
  */
 public class SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa {
     /** ANSI kolore gorria. */
@@ -51,9 +61,6 @@ public class SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa {
 
     /** ANSI kolore horia. */
     public static final String YELLOW = "\u001b[33m";
-
-    /** ANSI reset-a. */
-    public static final String RESET = "\u001b[0m";
 
     /** Eskakizun operazionalak azalpeneko String ArrayList-a. */
     public static final ArrayList<String> eoAzalpenak = new ArrayList<>();
@@ -72,38 +79,58 @@ public class SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa {
     static {
         piAzalpenak.add("Programa informatikoa software aplikazio edo sistemak dira, ordenagailuetan exekutatzeko diseinatuta daudenak.");
         piAzalpenak.add("Programa informatikoak hainbat helburu izan ditzakete, hala nola datuak prozesatzea, komunikazioa erraztea edo entretenimendua eskaintzea.");
-        piAzalpenak.add("Programa informatikoak hainbat kategoria ditu, hala nola sistema eragileak" + RED + " (Windows, macOS, ...)" + RESET + ", aplikazioak" + RED + " (Firefox, Steam, ...)" + RESET + " eta utilitate programak" + RED + " (Microsot Office, CPU-Z, ...)." + RESET);
+
+        piAzalpenak.add("Programa informatikoak hainbat kategoria ditu, hala nola sistema eragileak "
+            + paint(RED, "(Windows, macOS, ...)") + ", aplikazioak "
+            + paint(RED, " (Firefox, Steam, ...)") + " eta utilitate programak"
+            + paint(RED, " (Microsot Office, CPU-Z, ...)."));
+
         piAzalpenak.add("Garapen prozesua normalean diseinua, programazioa, probak eta mantentze-lanak barne hartzen ditu.");
         piAzalpenak.add("Programa informatikoaren kalitatea erabiltzailearen esperientzian eta funtzionalitatean oinarritzen da.");
     }
 
     /**
      * Main metodoa.
-     * @param args komando lerroko argumentuak.
+     * 
+     * @param args Komando lerroko argumentuak.
      */
     public static void main(String[] args) {
-        // Eskakizun operazionaleko azalpen titulua.
         final String EO_TITULUA = "Zer dira eskakizun operazionalak?";
-
-        System.out.println(GREEN + EO_TITULUA + RESET);
-        System.out.println("-".repeat(EO_TITULUA.length()));
-        System.out.println();
-
-        for (int i = 0; i < eoAzalpenak.size(); i++) {
-            System.out.println(YELLOW + (i + 1) + RESET + ". " + eoAzalpenak.get(i));
-        }
-
-        System.out.println();
-
-        // Programa informatikoko azalpen titulua.
         final String PI_TITULUA = "Zer da programa informatikoa?";
 
-        System.out.println(GREEN + PI_TITULUA + RESET);
-        System.out.println("-".repeat(PI_TITULUA.length()));
+        printArray(PI_TITULUA, piAzalpenak);
+        printArray(EO_TITULUA, eoAzalpenak);
+    }
+
+    /**
+     * Mezu bat kolore batez margotzen du.
+     * 
+     * @param kolorea ANSI kolorea.
+     * @param mezua Margotu nahi den mezua.
+     * @return Koloreztatua dagoen mezua.
+     */
+    public static String paint(String kolorea, String mezua) {
+        return kolorea + mezua + "\u001b[0m";
+    }
+
+    /**
+     * ArrayList baten edukia formateatuta inprimatzen du.
+     * 
+     * @param titulua ArrayList-aren titulua.
+     * @param azalpenak Inprimatu nahi den ArrayList-a.
+     */
+    public static void printArray(String titulua, ArrayList<String> azalpenak) {
+        System.out.println(paint(GREEN, titulua));
+        System.out.println("-".repeat(titulua.length()));
         System.out.println();
 
-        for (int i = 0; i < piAzalpenak.size(); i++) {
-            System.out.println(YELLOW + (i + 1) + RESET + ". " + piAzalpenak.get(i));
+        for (int i = 0; i < azalpenak.size(); i++) {
+            String indexa = paint(YELLOW, String.valueOf(i + 1));
+            String lerroa = String.format("%s. %s", indexa, azalpenak.get(i));
+
+            System.out.println(lerroa);
         }
+
+        System.out.println();
     }
 }
