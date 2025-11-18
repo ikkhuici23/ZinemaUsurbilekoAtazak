@@ -41,10 +41,10 @@ import java.util.ArrayList;
 // Kodearen aplikatutako birfaktorizazioa:
 // ---------------------------------------
 //
-// 1. Javadoc iruzkinak gehitu dira klaseari eta bere metodo nagusiari.
-// 2. paint() metodoa gehitu da, mezu bat kolore batez margotzeko eta ANSI kolore eskuz ez idazteko.
-// 3. printArray() metodoa gehitu da, ArrayList baten edukia formateatuta inprimatzeko eta kode errepikatua saihesteko.
-// 4. main() metodoa birfaktorizatu da, printArray() metodoa erabiliz eta kode askoz garbiagoa lortuz.
+// 1. Javadoc iruzkinak gehitu dira klaseari. [lerro 49-54]
+// 2. paint() metodoa gehitu da, mezu bat kolore batez margotzeko eta ANSI kolore eskuz ez idazteko. [lerro 112-114]
+// 3. printArray() metodoa gehitu da, ArrayList baten edukia formateatuta inprimatzeko eta kode errepikatua saihesteko. [lerro 122-135]
+// 4. main() metodoa birfaktorizatu da, printArray() metodoa erabiliz eta kode askoz garbiagoa lortuz. [lerro 97-103]
 
 /**
  * Softwarearen garapena, eskakizun operazionalak eta programa informatikoak zer diren
