@@ -12,10 +12,12 @@ public class EstekakEtaScrumAzalpena {
     public static final ArrayList<String> azalpenak = new ArrayList<>();
 
     static {
-        azalpenak.add("Scrum proiektu kudeaketa metodologia bat da, batez ere software garapenean erabiltzen dena.");
+        azalpenak.add("\"Scrum\" proiektu kudeaketa metodologia bat da, batez ere software garapenean erabiltzen dena.");
         azalpenak.add("Agile printzipioetan oinarritzen da eta taldeek lan egiteko modu eraginkorra eskaintzen du.");
         azalpenak.add("Scrum-en, lanak 'sprints' izeneko epe laburretan banatzen dira, eta taldeek helburu zehatzak lortzen dituzte epe horietan.");
         azalpenak.add("Scrum-ek rol zehatzak definitzen ditu, hala nola Product Owner, Scrum Master eta Development Team.");
+        azalpenak.add("Eguneroko bilera laburrak (\"Daily Stand-ups\") egiten dira, non taldeak aurrerapenak eta oztopoak partekatzen dituen.");
+        azalpenak.add("Scrum prozesuak jarraipen eta hobekuntza etengabea sustatzen du, bezeroaren beharrak modu eraginkorrean asetzeko.");
     }
 
     public static void main(String[] args) {
