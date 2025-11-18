@@ -23,12 +23,12 @@ public class EstekakEtaScrumAzalpena {
     public static void main(String[] args) {
         final String TITULUA = "Zer da Scrum metodologiak?";
 
-        System.out.println(TITULUA);
+        System.out.println(GREEN + TITULUA + RESET);
         System.out.println("-".repeat(TITULUA.length()));
         System.out.println();
 
-        for (String azalpena : azalpenak) {
-            System.out.println(azalpena);
+        for (int i = 0; i < azalpenak.size(); i++) {
+            System.out.println(YELLOW + (i + 1) + RESET + ". " + azalpenak.get(i));
         }
     }
 }
