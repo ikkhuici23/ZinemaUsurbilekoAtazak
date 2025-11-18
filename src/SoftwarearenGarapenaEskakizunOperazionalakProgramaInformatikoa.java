@@ -24,6 +24,11 @@ import java.util.ArrayList;
 // 4. Kodearen exekuzioa jarraitu nahi baduzu, "Continue" botoia sakatu dezakezu debugerako
 //    interfazean. Honek, hurrengo break-point-era edo programaren amaierara arte exekutatuko du.
 //
+// 5. Step-into, Step-over eta Step-out funtzioak ere erabil ditzakezu kodearen exekuzioa pausatu,
+//    lerro bakoitzean zehar nabigatzeko. "Step-into" botoia erabil dezakezu funtzio baten barruan
+//    sartu nahi baduzu, "Step-over" botoia erabil dezakezu funtzioa saltatu nahi baduzu, eta "Step-out"
+//    botoia erabil dezakezu funtzio baten exekuzioa amaitu eta deitzailearen lerroan itzuli nahi baduzu.
+//
 // 5. Debugerra amaitu nahi baduzu, "Stop" botoia sakatu dezakezu debugerako interfazean.
 
 // Nola sortu Javadoc dokumentazioa:
