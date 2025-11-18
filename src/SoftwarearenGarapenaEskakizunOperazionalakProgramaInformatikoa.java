@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 // Nola erabili debugerra:
+// -----------------------
 //
 // Java proiektu batean oso garrantzitsua da debugerra erabiltzea. Debugerra programatzaileentzako
 // oso tresna erabilgarria da, kodearen exekuzioa pausatu, aldagaiak ikusi eta balioak aldatu ahal
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 // 5. Debugerra amaitu nahi baduzu, "Stop" botoia sakatu dezakezu debugerako interfazean.
 
 // Nola sortu Javadoc dokumentazioa:
+// ---------------------------------
 //
 // Proiektu karpeta nagusi barruan urrengo komandoa terminalean sartu:
 //
