@@ -25,6 +25,21 @@ import java.util.ArrayList;
 //
 // 5. Debugerra amaitu nahi baduzu, "Stop" botoia sakatu dezakezu debugerako interfazean.
 
+// Nola sortu Javadoc dokumentazioa:
+//
+// Proiektu karpeta nagusi barruan urrengo komandoa terminalean sartu:
+//
+// & "C:\Program Files\Java\jdk-22\bin\javadoc.exe" -d docs .\src\SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa.java
+//
+// Komando honek "docs/" izeneko karpeta batean Javadoc dokumentazioa sortuko du. Dokumentazio honek
+// "SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa.java" fitxategian dauden Javadoc
+// iruzkinak irakurriko ditu eta HTML fitxategi moduan formateatuko ditu. Sortutako dokumentazioa
+// nabigatzaile batean ikusi nahi baduzu, "docs/index.html" fitxategia irekiz, biztaratu ahal duzu.
+
+/**
+ * Softwarearen garapena, eskakizun operazionalak eta programa informatikoak zer diren
+ * azaltzen dituen klasea.
+ */
 public class SoftwarearenGarapenaEskakizunOperazionalakProgramaInformatikoa {
     /** ANSI kolore gorria. */
     public static final String RED = "\u001b[31m";
